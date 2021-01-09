@@ -1,0 +1,59 @@
+
+
+<div class="shared-stepper">
+  <div class="row m-0 box">
+      <div class="col-sm-0 col-md-2 col-lg-2">
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+          <div class="row m-0 stepper-container">
+            <!-- mobile view -->
+            <div class="mobile-container" id="content-mobile">
+              <label>{{this.stepperData.pageName}}</label>
+              <span class="page-count">{{this.stepperData.pageCount}}/3</span>
+            </div>
+
+            <!-- desktop view -->
+            <div class="desktop-container" id="content-desktop">
+              <div class="stepper-box">
+                <span class="icon-circle-dot" [ngClass]="{
+                  'dot-active': this.stepperStatus.first.isActive === true,
+                  'dot-checked':  this.stepperStatus.first.isChecked === true,
+                  'dot-inactive': this.stepperStatus.first.isActive === false && this.stepperStatus.first.isChecked === false
+                }"></span>
+                <div class="circle-line" [ngClass]="{
+                'line-checked':  this.stepperStatus.first.isChecked === true,
+                'line-inactive': this.stepperStatus.first.isActive === false
+              }"></div>
+              <span class="icon-circle-dot" [ngClass]="{
+                'dot-active': this.stepperStatus.second.isActive === true,
+                'dot-checked':  this.stepperStatus.second.isChecked === true,
+                'dot-inactive': this.stepperStatus.second.isActive === false && this.stepperStatus.second.isChecked === false
+              }"></span>
+                <div class="circle-line" [ngClass]="{
+                'line-checked':  this.stepperStatus.second.isChecked === true,
+                'line-inactive': this.stepperStatus.second.isActive === false
+              }"></div>
+              <span class="icon-circle-dot" [ngClass]="{
+                'dot-active': this.stepperStatus.third.isActive === true,
+                'dot-checked':  this.stepperStatus.third.isChecked === true,
+                'dot-inactive': this.stepperStatus.third.isActive === false && this.stepperStatus.third.isChecked === false
+              }"></span>
+              </div>
+              <div class="label-container">
+                <label class="page-label" [ngClass]="{
+                  'hidden': !this.stepperStatus.first.isActive
+                }" [hidden]="!this.stepperStatus.first.isActive">{{this.stepperStatus.first.label}}</label>
+                <label class="page-label" [ngClass]="{
+                  'hidden': !this.stepperStatus.second.isActive
+                }" [hidden]="!this.stepperStatus.second.isActive">{{this.stepperStatus.second.label}}</label>
+                <label class="page-label" [ngClass]="{
+                  'hidden': !this.stepperStatus.third.isActive
+                }" [hidden]="!this.stepperStatus.third.isActive">{{this.stepperStatus.third.label}}</label>
+              </div>
+            </div>
+          </div>
+      </div>
+    <div class="col-sm-0 col-md-2 col-lg-2">
+    </div>
+  </div>
+</div>

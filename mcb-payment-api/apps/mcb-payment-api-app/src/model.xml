@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <container>
+        <name>mcb-payment-api-app-ang</name>
+        <properties>
+            <property name="title" type="string" readonly="true" label="Title" viewHint="admin,designModeOnly">
+                <value>MCB Payment Api App Container</value>
+            </property>
+            <property name="label" type="string">
+                <value>MCB Payment Api App Container</value>
+            </property>
+        </properties>
+    </container>
+</catalog>

@@ -1,0 +1,31 @@
+.link-text{
+    color:#1971C2;
+}
+.text-grey{
+    color: #7A7A7A;
+}
+
+.text-grey-2{
+    color: $color-gray-dark;
+}
+
+::placeholder {
+    color:$color-neutral-greyer !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $color-neutral-greyer !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: $color-neutral-greyer !important;
+  }
+
+  .heading-1{
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    text-align: center;
+  }

@@ -1,0 +1,24 @@
+@import "color";
+
+////
+/// @group brand, global
+/// @access private
+////
+
+/// Global border width
+/// @access public
+/// @todo make sure this is the default border width in all components
+$border-width: 1px !default;
+
+/// Global border style
+/// @access public
+$border-style: solid;
+
+/// Global border color
+/// @access public
+/// @todo make sure this is the default border color in all components
+$border-color: $color-neutral-greyest !default;
+
+/// Global border (read-only)
+/// @access public
+$border: $border-width $border-style $border-color;

@@ -1,0 +1,19 @@
+
+    /// Add your own font-face
+    @font-face {
+      font-weight:400;
+      font-style:normal;
+      font-family:"Lato";
+      src: url("#{$path-fonts}/Lato/Lato-Regular.ttf");
+    }
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('./../../assets/fonts/icon/icomoon.eot?kn6wl7');
+      src:  url('./../../assets/fonts/icon/icomoon.eot?kn6wl7#iefix') format('embedded-opentype'),
+        url('./../../assets/fonts/icon/icomoon.ttf?kn6wl7') format('truetype'),
+        url('./../../assets/fonts/icon/icomoon.woff?kn6wl7') format('woff'),
+        url('./../../assets/fonts/icon/icomoon.svg?kn6wl7#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }

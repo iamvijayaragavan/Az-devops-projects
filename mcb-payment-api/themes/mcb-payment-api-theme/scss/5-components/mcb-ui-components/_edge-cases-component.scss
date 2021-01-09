@@ -1,0 +1,74 @@
+bb-edge-cases-ui{
+   .main-conatiner{
+    background-color: #fff !important ;
+    margin: auto;
+    padding: 0 !important;
+    margin-bottom: 160px;
+    margin-top: 50px;
+     // Extra-Small devices
+     @media (max-width: 375px) { 
+        padding: 0 2rem;
+    }
+
+     // Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+        padding: 0 2rem;
+    }
+   }
+
+    .edge-cases{
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 5px auto;
+        
+        &.session-time-out{
+            background-image: url(../../../assets/images/session-timeout.svg);   
+        }
+    
+        &.something-went-wrong{
+            background-image: url(../../../assets/images/something-went-wrong.svg);   
+        }
+    
+        &.authorization-failed, &.come-see-us, &.default{
+            background-image: url(../../../assets/images/authorization-failed.svg);   
+        }
+       
+        // Extra-Small devices
+        @media (max-width: 375px) { 
+            width: 12em;
+            height: 14em;
+            background-size: 12em;
+        }
+
+         // Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+            width: 12em;
+            height: 14em;
+            background-size: 12em;
+        }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            width: 16em;
+            height: 20em;
+            background-size: 16em;
+        }
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            width: 21em;
+            height: 20em;
+            background-size: 16em;
+        }
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            width: 30em;
+            height: 20em;
+            background-size: 20em;
+        }
+
+    }
+
+    
+}

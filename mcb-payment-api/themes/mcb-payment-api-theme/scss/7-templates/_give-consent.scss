@@ -1,0 +1,92 @@
+mcb-mcb-payment-give-consent-method-widget{
+    .container{
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        padding: 24px;
+    }
+    .title {
+        width: 464px;
+        color: #000000;
+        font-size: 1.25rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 32px;
+        padding: 0 30px;
+        height: 48px;
+    }
+    .account-detail-container{
+        padding: 24px;
+        width: 464px;
+        background-color: #FFFFFF;
+    }
+    .rectangle {
+        height: 1px;
+        margin: auto;
+        margin-bottom: 0px;
+        background-color: #E7E7E7;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .info-container{
+        padding: 24px 0px 0px 0px;
+        color: #55585A;
+        font-size: 0.875rem;
+        letter-spacing: 0;
+        line-height: 24px;
+        display: flex;
+        flex-direction: row;
+    }
+    .info-text{
+        width: 401px;
+    }
+    .consent-btn{
+        margin: 32px 0 0 0px;
+        height: 48px;
+        width: 304px;
+        border-radius: 4px;
+        background-color: #2E3031;
+        color: #FFFFFF;
+    }
+    .info-icon{
+            margin-right: 8px;
+    }
+    .label-text{
+        font-size: 0.875rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 16px;
+    }
+    .value-text{
+        color: #55585A;
+        font-size: 0.875rem;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+    .btn-text{
+        font-size: 18px;
+        width: 231.94px;
+    }
+    @media only screen and (max-width: 600px) {
+        .title{
+            width: 304px;
+        }
+        .account-detail-container{
+            width: 305px;
+        }
+        .info-container{
+            width: 305px;
+        }
+        .consent-btn{
+            margin: 32px 0 0 0;
+        }
+        .info-icon{
+            margin-right: 10px;
+            margin-bottom: 32px;
+        }
+    }
+}

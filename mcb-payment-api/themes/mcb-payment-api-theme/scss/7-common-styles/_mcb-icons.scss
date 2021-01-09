@@ -1,0 +1,21 @@
+.mcb-svg-icon{
+    display: inline-block;
+    text-indent: -9999px;
+    width: 24px;
+    height: 24px;
+    vertical-align: sub;
+    &.icon-lock{
+        background-image: url(../../assets/images/icon-lock.svg);
+    }
+    &.warning-icon{
+        background-image: url(../../assets/images/warning.svg);
+    }
+    &.error-icon{
+        background-image: url(../../assets/images/error.svg);
+    }
+}
+
+
+.mcb-arrow-icon {
+    cursor: pointer;
+}

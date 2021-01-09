@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    background-color: #F9F9F9 !important;
+}
+
+h1{
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+label,input{
+  font-size: 0.875rem;
+  font-weight: 400 !important;
+}
+
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
+}
+.margin-top-20{
+  margin-top: 20px;
+}
+.margin-top-30{
+  margin-top: 30px;
+}
+
+.info-text-1{
+  font-size: 0.875rem;
+  color: #55585A;
+}
+
+.info-text-2{
+  font-size: 0.875rem;
+  color: #7A7A7A;
+}
+
+.mcb-form{
+  display: block;
+    float: left;
+    width: 100%;
+}
+
+.mcb-btn{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mcb-btn.mcb-btn-primary, .mcb-btn.mcb-btn.mcb-btn-primary:hover {
+  color: #fff;
+  background-color: #DC143D;
+  border:1px solid #DC143D;
+  box-shadow: none;
+}
+
+.mcb-btn.mcb-btn-secondary, .mcb-btn.mcb-btn-secondary:hover {
+  background-color: #fff !important;
+  border: 1px solid #2E3031 !important;
+  color: #2E3031 !important;
+  box-shadow: none;
+}
+
+.mcb-btn.mcb-btn-cancel, .mcb-btn.mcb-btn-cancel:hover{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color:#1971C2;
+}
+
+.mcb-main-container{
+  max-width: 1024px;
+  background-color: #fff !important ;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .mcb-main-container{
+    padding: 0 1rem;
+  }
+}
+
+.mcb-logo{
+    display: block;
+    text-indent: -9999px;
+    width: 76px;
+    height: 30px;
+    background: url(../img/mcb_logo.svg);
+    background-repeat: no-repeat;
+    margin-top:32px;
+    margin-bottom: 32px;
+}
+
+.ib-login-banner{
+    text-indent: -9999px;
+    width: 374px;
+    height: 395px;
+    background: url(../img/ib-login-banner.svg);
+    background-repeat: no-repeat;
+    margin-top: 163px;
+}
+
+.bitmapImg{
+    display: block;
+    text-indent: -9999px;
+    width: 75px;
+    height: 60px;
+    background: url(../img/Bitmap.svg);
+    background-repeat: no-repeat;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bitmap-container{
+  max-width: 460px;
+  margin: auto;
+}
+
+.mcb-error{
+  color: #000000;
+  padding: 12px;
+}
+
+.mcb-error-icon{
+    width: 34px;
+    height: 24px;
+    margin-right: 5px;
+    
+}
+.mcb-error-text{
+  font-weight: 600;
+}
+.mcb-close-icon{
+  cursor: pointer;
+}

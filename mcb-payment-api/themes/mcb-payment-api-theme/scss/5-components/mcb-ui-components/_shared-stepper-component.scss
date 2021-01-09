@@ -1,0 +1,128 @@
+bb-shared-stepper-ui{
+    .circle-line{
+        background-color: #d3d4de;;
+        height: 2px;
+        width:191px;
+        margin-top: 7px;
+    }
+    .circle {  
+        width: 15px;
+        height: 15px;
+        border:1px black solid;
+        background-color: white;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .stepper-box{
+        display: flex;
+        flex-direction: row;
+        max-width: 240px;
+        width: 100%;
+        margin: auto;
+    }
+    .dot-active{
+        color :black;
+    }
+    .dot-inactive{
+        color :#d3d4de;
+    }
+    .dot-checked{
+        color :green;
+    }
+    .line-inactive{
+        background-color :#d3d4de;
+    }
+    .line-checked{
+        background-color :green;
+    }
+    .label-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 8px;
+        max-width: 336px;
+        width: 100%;
+    }
+    .hidden{
+        display: block !important;
+        visibility: hidden;
+    }
+
+    #content-desktop {display: flex;}
+    #content-mobile {display: none;}
+
+    @media screen and (max-width: 767px) {
+        #content-desktop {display: none;}
+        #content-mobile {display: flex;}
+    }
+    .desktop-container{
+        padding: 16px;
+        width: 100%;
+        flex-direction: column;
+        height: 72px;
+    }
+    .page-label{
+        min-width: 78px;
+        text-align: center;
+        font-size: 0.6875rem;
+        height: 16px;
+        width: 69px;
+        color: #000000;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        line-height: 16px;
+    }
+
+    // mobile
+    .mobile-container{
+        padding: 16px 0 16px 24px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 352px;
+        height: 56px;
+    }
+    .page-count{
+        color:#7A7A7A;
+        width: 25px;
+        height: 24px;
+    }
+
+    // record icon specific styles
+
+    [class^="icon-"], [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .icon-circle-dot:before {
+        content: "\e902";
+    }
+    .icon-dot:before {
+        content: "\e900";
+    }
+      
+    .stepper-container{
+        margin-top: 63px !important;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 22px 0px rgba(211, 211, 211, 0.5) !important;
+    }
+    .shared-stepper{
+        position: fixed;
+        width: 100%;
+        z-index: 9;
+    }
+}
+

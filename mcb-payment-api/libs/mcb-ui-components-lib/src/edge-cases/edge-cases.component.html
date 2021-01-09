@@ -1,0 +1,28 @@
+<div class="main-conatiner">
+  <div class="row m-0">
+    <div class="col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-sm-12 col-md-8 col-lg-8">
+      <div class="row">
+        <div class="col-sm-12">
+          <div
+              class="edge-cases" ngClass="{{image != undefined ? image : 'default' }}">
+            </div>
+        </div>
+      </div>  
+      <h2 class="text-center">{{heading}}</h2>
+      <p class="text-center pl-3 pr-3">
+        {{description}}
+      </p>
+      <div class="mcb-btn mcb-btn-continue mt-5 row">
+        <div class="col-sm-0 col-md-2 col-lg-2"></div>
+        <div class="col-sm-12 col-md-8 col-lg-8">
+          <button bbButton class="btn-lg btn-block" type="button" aria-label="Favourite">
+            {{edgeCasesLabel.backbtnLable}}
+          </button>
+        </div>
+        <div class="col-sm-0 col-md-2 col-lg-2"></div>
+      </div>
+    </div>
+    <div class="col-sm-0 col-md-2 col-lg-2"></div>
+  </div>
+</div>

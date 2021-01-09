@@ -1,0 +1,68 @@
+/// Configures the brand primary color
+/// Used to calculate lighter and darker shade variables
+/// @access public
+$color-primary: #DC143D !default;
+
+/// Configures the brand secondary color
+/// Used to calculate lighter and darker shade variables
+/// @access public
+$color-secondary: #A3A3A3 !default;
+
+/// Configures the brand accent color
+/// Used to calculate lighter and darker shade variables
+// $color-accent: #7A7A7A
+
+/// Configures the semantic success color
+/// Used to calculate lighter and darker shade variables
+// $color-success: #55B896
+
+/// Configures the semantic danger color
+/// Used to calculate lighter and darker shade variables
+// $color-danger: #DC143C
+
+/// Configures the semantic warning color
+/// Used to calculate lighter and darker shade variables
+// $color-warning:
+
+/// Configures the semantic info color
+/// Used to calculate lighter and darker shade variables
+// $color-info:
+
+/// Configures the default white color
+// $color-neutral-white:
+
+/// Configures the lightest neutral color
+// $color-neutral-lightest:
+
+/// Configures the lighter neutral color
+// $color-neutral-lighter:
+
+/// Configures the light neutral color
+// $color-neutral-light:
+
+/// Configures the grey neutral color
+$color-neutral-grey: #7A7A7A;
+
+$color-gray-dark: #55585A;
+
+/// Configures the darker grey neutral color
+/// @access public
+$color-neutral-greyer: #a3a3a3 !default;
+
+/// Configures the darkest grey neutral color
+/// @access public
+$color-neutral-greyest: #2E3031 !default;
+
+/// Configures the dark neutral color
+$color-neutral-dark:#2E3031;
+
+
+$color-gray-light:#3B3D3F;
+/// Configures the darker neutral color
+// $color-neutral-darker:
+
+/// Configures the black neutral color
+// $color-neutral-black:
+
+$color-link-text: #1971C2;
+

@@ -1,0 +1,74 @@
+mcb-select-account-widget-extended{
+ 
+    .bb-input-radio-group__radio.selected:not(:disabled):not(.disabled)::after {
+        color: #000000;
+        background-color: #000000;
+    }
+
+    .bb-input-radio-group__radio.selected:not(:disabled):not(.disabled)::before {
+        border-color: #000000;
+    }
+
+    .account-title {
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .account-number {
+        color: $color-gray-dark !important;
+        font-size: 14px;
+        padding-left: 2.6em;
+    }
+
+    .account-selector-icon{
+        background-repeat: no-repeat;
+        width: 23px;
+        height: 20px;
+        display: block;
+        text-indent: -9999px;
+    }
+
+    .saving {
+        @extend .account-selector-icon;
+        background: url(../../../assets/images/saving-account-icon.svg);
+    }
+
+    .current {
+        @extend .account-selector-icon;
+        background: url(../../../assets/images/current-account-icon.svg);
+    }
+
+    .join{
+        @extend .account-selector-icon;
+        background: url(../../../assets/images/joint-account-icon.svg);
+    }
+
+    .rupay {
+        @extend .account-selector-icon;
+        background: url(../../../assets/images/rupay-account-icon.svg);
+    }
+
+    .mcb-loading-conatiner{
+        background-color: rgba(0,0,0,0.7);
+        height: 100vh;
+    }
+
+    .mcb-loading-icon{
+        padding-top:50px;
+        height:200px;
+        background-color: #ffff;
+        margin-top: 250px;
+        border-radius: 1.5rem;
+    }
+
+    .main-container{
+        padding-top: 175px !important;
+    }
+
+    .mcb-card-holder{
+        min-height: 120px !important;
+    }
+    .card-container{
+        margin-top: 16px;
+    }
+}

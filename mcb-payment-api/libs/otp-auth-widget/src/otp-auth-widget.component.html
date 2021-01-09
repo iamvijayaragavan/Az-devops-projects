@@ -1,0 +1,46 @@
+<bb-shared-stepper-ui [stepperData]="stepperData"></bb-shared-stepper-ui>
+<div class="container-fluid main-conatiner">
+  <form [formGroup]="otpForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row col-lg-8 col-md-12 col-sm-12 mcb-container-secondary">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+        <h3 class="heading-1">{{this.otpAuthConstants.headingText(userInfo.number)}}</h3>
+        <p><span class="link-text" (click)="comeSeeUs()">{{this.otpAuthConstants.noAccessText}}</span></p>
+        <div class="col-lg-12 col-md-12 col-sm-12 mcb-inner-container">
+          <p>{{this.otpAuthConstants.descriptionText.part1}}
+          </p>
+          <p><strong>MUR {{userInfo.amount}}</strong></p>
+          <p class="text-grey">{{this.otpAuthConstants.descriptionText.part2}}</p>
+          <p><strong>{{this.otpAuthConstants.descriptionText.part3}}</strong><br /><span class="text-grey">000561655684</span></p>
+          <div class="mcb-btn mcb-btn-cancel">
+            <button bbButton class="btn-lg btn-block" (click)="navigateToAccountPage()" type="button">
+              {{this.otpAuthConstants.changeAccountBtnText}}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+        <div class="col-lg-12 col-md-12 col-sm-12 mcb-inner-container pb-2">
+          <div class="form-group mcb-form">
+            <bb-input-text-ui label="OTP" labelClasses="font-weight-bold" data-role="login-form-username-input"
+              placeholder="{{this.otpAuthConstants.enterOTPPlaceholder}}" formControlName="otp">
+            </bb-input-text-ui>
+          </div>
+          <div class="mcb-btn mcb-btn-cancel">
+            <button bbButton class="btn-lg btn-block" type="button">
+              {{this.otpAuthConstants.resentBtnText}}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+        <div class="mcb-btn mcb-btn-primary">
+          <button bbButton class="btn-lg btn-block btn-primary" [disabled]="!otpForm.valid" type="submit">
+            {{this.otpAuthConstants.authBtnText}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,94 @@
+<bb-shared-stepper-ui [stepperData]="stepperData"></bb-shared-stepper-ui>
+<bb-product-summary-account-selector-widget></bb-product-summary-account-selector-widget>
+
+<ng-template bbAccountSelectorDropdownCustomizable let-hostRef let-accounts="context">
+    <div class="row m-0">
+        <div class="col-sm-3 col-md-3 col-lg-4"></div>
+        <div class="col-sm-6 col-md-6 col-lg-4 main-container">
+            <div class="text-center">
+                <h2>Pay MUR {{userInfo.amount}}</h2>
+                <p>to {{userInfo.marchent}} from:</p>
+            </div>   
+            <form  class="row m-0" [formGroup]="form">
+            <div class="mcb-cards" *ngFor="let account of accounts">
+                <div class="card card-container">
+                    <div class="card-body p-3 mcb-card-holder">
+                        <div class="row pt-2 pb-2">
+                            <div class="col-2 pl-4">
+                                <div [ngClass]="{'saving': account.productKindName === 'Current Account',
+                                    'current': account.productKindName === 'Term Deposit',
+                                    'join': account.productKindName === 'My Custom Product Kind',
+                                    'rupay': account.productKindName === 'Loan'}" 
+                                class="card-title mb-0 account-title pb-2"></div> 
+                            </div>
+                            <div class="col-7 p-0">
+                                <p class="card-title mb-0 account-title pb-2">{{ account.name }}</p> 
+                            </div>
+                            <div class="col-3">
+                                <div class="float-right pt-2">
+                                    <bb-input-radio-group-ui 
+                                        [(ngModel)]="selectedAccount" 
+                                        formControlName="accountType" 
+                                        aria-labelledby="'label-account-type'" 
+                                        [preselect]="false" 
+                                        [required]="true">
+                                        <bb-input-radio-ui [value]="account"></bb-input-radio-ui>
+                                    </bb-input-radio-group-ui>
+                                </div>
+                            </div>
+                            <div class="col-12 pl-5">
+                                <div class="card-description account-number">{{ account.id }}</div> 
+                            </div>
+                            <div class="col-12 pt-3">
+                                <div class="float-right account-title">{{account.currency}} {{account.availableBalance}}</div> 
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            </form> 
+            <div class="mcb-btn mcb-btn-primary mt-4 row">
+                <div class="col-sm-0 col-md-1 col-lg-1"></div>
+                <div class="col-sm-12 col-md-10 col-lg-10">
+                    <div class="mcb-btn mcb-btn-continue">
+                        <button bbButton (click)="onRadioTemplateFormSubmit()"
+                                class="btn-lg btn-block" 
+                                type="button" 
+                                aria-label="Favourite" [disabled]="!form.valid">
+                            {{accountSelectorLables.continuebtnLabel}}
+                          </button>
+                    </div>
+                    <div class="mcb-btn mcb-btn-back mt-1 mb-3">
+                        <button bbButton class="btn-lg btn-block" 
+                            (click)="back()" 
+                            type="button" 
+                            aria-label="Favourite">
+                            {{accountSelectorLables.backbtnLabel}}
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-0 col-md-1 col-lg-1"></div>   
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-4"></div>
+    </div>
+</ng-template>
+
+<ng-template bbAccountSelectorLoadingCustomizable let-hostRef>
+    <div class="col-12 mcb-loading-conatiner">
+        <ng-container *ngIf="hostRef.error | async as error; else loading">
+        </ng-container>
+        <ng-template #loading>
+            <div class="row m-0">
+                <div class="col-sm-5 col-md-4 col-lg-5"></div>
+                    <div class="col-sm-2 col-md-4 col-lg-2">
+                        <div class="mcb-loading-icon">
+                            <bb-loading-indicator-ui i18n-text="@@product.details.loadingAccounts">
+                            </bb-loading-indicator-ui>
+                        </div> 
+                    </div>
+                <div class="col-sm-5 col-md-4 col-lg-5"></div>
+            </div>    
+        </ng-template>
+    </div>
+</ng-template>

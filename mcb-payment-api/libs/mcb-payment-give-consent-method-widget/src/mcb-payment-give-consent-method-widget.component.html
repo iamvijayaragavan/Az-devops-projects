@@ -1,0 +1,41 @@
+<bb-shared-stepper-ui [stepperData]="stepperData"></bb-shared-stepper-ui>
+<div class="container main-conatiner">
+    <div class="title col-sm-12">
+        <h3>{{userInfo.marchent}} {{this.consentPageConstants.description}} {{this.consentPageConstants.currency}} {{userInfo.amount}}</h3>
+    </div>
+    <div class="account-detail-container col-sm-12">
+        <div>
+            <label class="label-text">
+                {{this.consentPageConstants.label1}}
+            </label>
+            <p class="value-text">
+                {{userInfo.accountRef}}
+            </p>
+            <p class="rectangle"></p>
+        </div>
+        <div>
+            <label class="label-text">
+                {{this.consentPageConstants.label2}}
+            </label>
+            <p class="value-text">
+                {{userInfo.billRef}}
+            </p>
+            <p class="rectangle"></p>
+        </div>
+        <div>
+            <label class="label-text">
+                {{this.consentPageConstants.label3}}
+            </label>
+            <p class="value-text">
+                {{userInfo.description}}
+            </p>
+        </div>
+    </div>
+    <div class="info-container">
+        <img class="info-icon" src="./assets/images/info.svg">
+        <span class="info-text">{{this.consentPageConstants.info}}</span>
+    </div>
+    <button class="consent-btn" (click)="giveConsent()">
+        <span class="btn-text">{{this.consentPageConstants.btnText}}</span>
+    </button>
+</div>

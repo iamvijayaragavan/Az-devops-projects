@@ -1,0 +1,41 @@
+<section class="container">
+    <div class="row m-0">
+        <div class="col-3 d-none d-sm-block"></div>
+        <div class="col-12 col-sm-6">
+            <div class="mcb-logo"></div>
+            <h1 class="mcb-main-heading">
+                {{authDetails.mainHeading.heading1}} <br/> {{authDetails.mainHeading.heading2}}
+            </h1>
+            <p class="mcb-sub-heading heading-conatiner">{{authDetails.subHeading}}</p>
+            <section class="mcb-cards" *ngFor="let authentication of authDetails.authenticationMethods">
+                <div class="card mt-3 mcb-card-pointer" (click)="onRedirectTo(authentication)">
+                    <div class="card-body">
+                        <p class="card-title mb-0 pb-2 mcb-sub-heading">{{ authentication.title }}</p>
+                        <div class="row">
+                            <div class="card-description col-8 mcb-sub-heading">
+                                {{authentication.description}}
+                            </div>
+                            <div class="col-4">
+                                <bb-icon-ui 
+                                    class="float-right" 
+                                    color="default"
+                                    name="arrow-forward"
+                                    size="md"
+                                >
+                                </bb-icon-ui>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </section>
+            <div class="mcb-btn mcb-btn-secondary mt-5 row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button bbButton class="btn-lg btn-block font-weight-normal" type="button" aria-label="Favourite">
+                        {{authDetails.cancelbtnLable}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-none d-sm-block"></div>
+    </div>
+</section>

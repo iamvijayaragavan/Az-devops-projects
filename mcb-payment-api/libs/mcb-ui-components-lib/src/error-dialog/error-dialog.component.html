@@ -1,0 +1,38 @@
+<div class="error-dialog-component">
+  <bb-modal-ui [isOpen]="showDialog" (cancel)="closeDialog()" (confirm)="onConfirmDialog()">
+    <bb-modal-header-ui>
+      <ng-template bbCustomModalHeader>
+        <div class="dialog-header">
+          <span class="mcb-svg-icon mr-2" ngClass="{{isTypeError ? 'error-icon' : 'warning-icon'}}"></span>
+          <span class="title-text">{{title}}</span>
+        </div>
+      </ng-template>
+    </bb-modal-header-ui>
+    <bb-modal-body-ui>
+      <ng-template bbCustomModalBody>
+        <span class="text-grey-2">{{description}}</span>
+      </ng-template>
+    </bb-modal-body-ui>
+    <bb-modal-footer-ui>
+      <ng-template bbCustomModalFooter>
+        <div class="mcb-btn mcb-btn-secondary" *ngIf="!isTypeError">
+          <button bbButton class="btn-lg btn-block dialog-btn" (click)="closeDialog()" type="button" aria-label="Favourite">
+            {{dialogConstants.no}}
+          </button>
+        </div>
+        <div class="mcb-btn mcb-btn-secondary" *ngIf="!isTypeError">
+          <button bbButton class="btn-lg btn-block dialog-btn" (click)="onConfirmDialog()" type="button"
+            aria-label="Favourite">
+            {{dialogConstants.yes}}
+          </button>
+        </div>
+        <div class="mcb-btn mcb-btn-continue" *ngIf="isTypeError">
+          <button bbButton class="btn-lg btn-block dialog-btn" (click)="closeDialog()" type="button"
+            aria-label="Favourite">
+            {{dialogConstants.ok}}
+          </button>
+        </div>
+      </ng-template>
+    </bb-modal-footer-ui>
+  </bb-modal-ui>
+</div>

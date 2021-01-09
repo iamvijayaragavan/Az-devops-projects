@@ -1,0 +1,26 @@
+<header class="conatiner box">
+    <div class="row m-0 box fixed-top " >
+        <div class="col-sm-0 col-md-2 col-lg-2"></div>
+        <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+            <div class="row m-0 pl-4 mcb-header-conatiner mcb-main-header">
+                <div class="col-6 mcb-header-logo ">
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-center mt-0 mb-0">
+                    <bb-icon-ui name="clear" class="mcb-icon mcb-arrow-icon" size="md" 
+                        color="default"
+                        (click)="cancel()">
+                    </bb-icon-ui>
+                </div>
+            </div> 
+        </div>
+        <div class="col-sm-0 col-md-2 col-lg-2"></div>
+    </div>
+
+    <bb-error-dialog-ui 
+        [showDialog]="showDialog" 
+        [isTypeError]="false" 
+        (isDialogOpen)="isDialogOpen($event)" 
+        [title]="headerConstants.cancelTitle" 
+        [description]="headerConstants.cancelDescription">
+    </bb-error-dialog-ui>
+</header>
